@@ -1,9 +1,12 @@
 
-//#include <ESP8266HTTPClient.h>
 
 
-#include <b64.h>
-#include <HttpClient.h>
+//#include <WiFiClientSecure.h>
+
+
+#include <ESP8266HTTPClient.h>
+//#include <b64.h>
+//#include <HttpClient.h>
 
 
 
@@ -30,6 +33,8 @@ IPAddress dns(10,0,2,200);
 
 
 String baseURL = "https://webtask.it.auth0.com/api/run/wt-1fc0ea3f18fe05976be8ee4ba5c7f23f-0/hello?number=";
+
+const char* fingerprint = "CA:EB:7C:EF:FC:32:49:DA:DE:7A:5A:D3:4C:29:AF:0B:D9:1F:70";
 
 
 // specific variables
@@ -352,7 +357,7 @@ void sendNum(String fullnum)
   String fullURL = baseURL + fullnum;
   //String payload = String(""); 
   HTTPClient http;
-  http.begin(fullURL);
+  http.begin(fullURL, fingerprint);
   Serial.println(fullURL);
   int httpCode = http.GET();  // send request
   
