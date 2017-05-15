@@ -34,7 +34,7 @@ IPAddress dns(10,0,2,200);
 
 String baseURL = "https://webtask.it.auth0.com/api/run/wt-1fc0ea3f18fe05976be8ee4ba5c7f23f-0/hello?number=";
 
-const char* fingerprint = "CA:EB:7C:EF:FC:32:49:DA:DE:7A:5A:D3:4C:29:AF:0B:D9:1F:70";
+const char* fingerprint = "C0 5D 08 5E E1:3E E0 66 F3 79 27 1A CA 1F FC 09 24 11 61 62";   //C0:5D:08:5E:E1:3E:E0:66:F3:79:27:1A:CA:1F:FC:09:24:11:61:62
 
 
 // specific variables
